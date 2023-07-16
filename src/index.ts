@@ -36,6 +36,10 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // @desc api routes
+app.get("/", (req, res) => {
+  res.send("Hey this is my API running 🥳");
+});
+
 app.use("/users", userRouter);
 app.use("/categories", categoryRouter);
 app.use("/products", productRouter);
